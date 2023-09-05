@@ -1,6 +1,10 @@
 # EM_Dataset-ColmapValidation
 
-For the reconstructions provided in the dataset, we used the COLMAP version provided in this repo. It was slightly modified to write files indicating covisible images i.e. images sharing at least one 3D point in common. The only modified files are [`reconstruction.h`](colmap/src/base/reconstruction.h) and [`reconstruction.cc`](colmap/src/base/reconstruction.cc). The COLMAP release tag used is 3.6 at this exact [commit](https://github.com/colmap/colmap/commits/a6ad9641a5fb06ae8315f9be7be270f79745cbcb).
+This repository contains the software for the EndoMapper dataset validation described in the section “COLMAP validation” of the publication:  
+
+    Azagra P. et al. Endomapper dataset of complete calibrated endoscopy procedures. Scientific Data. 2023. Accepted for publication.
+
+The validation software has been built on top of COLMAP release 3.6. The [`colmp folder`](https://github.com/endomapper/EM_Dataset-ColmapValidation/tree/main/colmap)  contains a clone of COLMAP release 3.6 at this exact [commit](https://github.com/colmap/colmap/commits/a6ad9641a5fb06ae8315f9be7be270f79745cbcb). Only the BSD licensed [`reconstruction.h`](colmap/src/base/reconstruction.h) and [`reconstruction.cc`](colmap/src/base/reconstruction.cc) files have been modified in order to generate files indicating covisible images i.e. images sharing at least one 3D point in common.
 
 For installing COLMAP from source, please follow their instructions [here](https://colmap.github.io/install.html).
 

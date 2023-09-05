@@ -29,6 +29,10 @@
 //
 // Author: Johannes L. Schoenberger (jsch-at-demuc-dot-de)
 
+// Modified by Javier Morlana (jmorlana-at-unizar-dot-es) for the Endomapper Dataset.
+// Addition of WriteImagesModelText to WriteText and WriteBinary functions, generating
+// a file with all the covisible images for each image. 
+
 #include "base/reconstruction.h"
 
 #include <fstream>
@@ -824,6 +828,7 @@ void Reconstruction::ReadBinary(const std::string& path) {
   ReadPoints3DBinary(JoinPaths(path, "points3D.bin"));
 }
 
+// Modified by Javier Morlana
 void Reconstruction::WriteText(const std::string& path) const {
   WriteCamerasText(JoinPaths(path, "cameras.txt"));
   WriteImagesText(JoinPaths(path, "images.txt"));
@@ -831,6 +836,7 @@ void Reconstruction::WriteText(const std::string& path) const {
   WriteImagesModelText(JoinPaths(path, "camerasModel.txt"));
 }
 
+// Modified by Javier Morlana
 void Reconstruction::WriteBinary(const std::string& path) const {
   WriteCamerasBinary(JoinPaths(path, "cameras.bin"));
   WriteImagesBinary(JoinPaths(path, "images.bin"));

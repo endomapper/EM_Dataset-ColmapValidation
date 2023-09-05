@@ -29,6 +29,10 @@
 //
 // Author: Johannes L. Schoenberger (jsch-at-demuc-dot-de)
 
+// Modified by Javier Morlana (jmorlana-at-unizar-dot-es) for the Endomapper Dataset.
+// Addition of WriteImagesModelText to WriteText and WriteBinary functions, generating
+// a file with all the covisible images for each image.
+
 #ifndef COLMAP_SRC_BASE_RECONSTRUCTION_H_
 #define COLMAP_SRC_BASE_RECONSTRUCTION_H_
 
